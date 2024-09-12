@@ -1,0 +1,8 @@
+services:
+  database:
+    image: mysql:8
+    environment:
+      MYSQL_ROOT_PASSWORD: "mudar123"
+      MYSQL_DATABASE: "unicesumar"
+    ports:
+      - "3306:3306"
