@@ -53,13 +53,13 @@ touch src/index.ts
 
 1. Codifique o arquivo `src/index.ts` seguindo o código do [repositório original](https://github.com/rafael-labegalini/mysql-api-adsb/blob/main/src/index.ts). Caso o arquivo não exista no seu projeto crie-o.
 
-2. Copie os arquivos de templates para dentro do diretório `src/views` seguindo a mesma estrutura do [repositório original](https://github.com/rafael-labegalini/mysql-api-adsb/tree/main/src/views)
+2. Crie os arquivos de templates dentro do diretório `src/views` seguindo a mesma estrutura do [repositório original](https://github.com/rafael-labegalini/mysql-api-adsb/tree/main/src/views)
 
 ### Passo 4: Rodando a Aplicação
 1.	Criar o script de inicialização da aplicação no `package.json`:
 ```json
 "scripts": {
-    "start": "ts-node --transpile-only src/app.ts",
+    "start": "ts-node --transpile-only src/index.ts",
 }
 ```
 
