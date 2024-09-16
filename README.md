@@ -70,3 +70,4 @@ Para executar a aplicação agora use os seguintes comandos:
 docker compose up -d
 npm start
 ```
+> PS: Certifique-se de que seu docker esteja rodando 
