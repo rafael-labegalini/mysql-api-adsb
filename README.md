@@ -59,8 +59,8 @@ touch src/index.ts
 1.	Criar o script de inicialização da aplicação no `package.json`:
 ```json
 "scripts": {
-    "start": "ts-node --transpile-only src/index.ts",
-}
+    "start": "ts-node --transpile-only src/index.ts"
+},
 ```
 
 2. Criar o arquivo `docker-compose.yaml` na raiz do projeto seguindo o modelo disponibilizado no [repositório original](https://github.com/rafael-labegalini/mysql-api-adsb/blob/main/docker-compose.yaml)
