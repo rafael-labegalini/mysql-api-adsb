@@ -24,7 +24,7 @@ npm install typescript ts-node @types/node @types/express @types/mysql --save-de
 npx tsc --init
 ```
 
-5.	Adicione os seguintes campos ao tsconfig.json para configurar adequadamente o projeto:
+5.	Subistitua o conteúdo do arquivo `tsconfig.json` gerado pelo comando anterior pelo conteúdo a seguir:
 ```json
 {
   "compilerOptions": {
@@ -42,23 +42,30 @@ npx tsc --init
 
 ### Passo 2: Criando a Estrutura de Pastas
 
-1.	Crie a pasta src e dentro dela, o arquivo index.ts:
+1.	Crie a pasta `src`, `src/views` e dentro da pasta `src` o arquivo `index.ts`:
 ```bash
 mkdir src
 mkdir src/views
 touch src/app.ts
 ```
 
-### Passo 3: Rodando a Aplicação
-2.	Criar o script de inicialização da aplicação no `package.json`:
+### Passo 3: Codificando
+
+1. Codifique o arquivo `src/index.ts` seguindo o código do [repositório original](https://github.com/rafael-labegalini/mysql-api-adsb/blob/main/src/index.ts). Caso o arquivo não exista no seu projeto crie-o.
+
+2. Copie os arquivos de templates para dentro do diretório `src/views` seguindo a mesma estrutura do [repositório original](https://github.com/rafael-labegalini/mysql-api-adsb/tree/main/src/views)
+
+### Passo 4: Rodando a Aplicação
+1.	Criar o script de inicialização da aplicação no `package.json`:
 ```json
 "scripts": {
     "start": "ts-node --transpile-only src/app.ts",
 }
 ```
 
-Para executar a aplicação agora use os seguintes
-comandos:
+2. Criar o arquivo `docker-compose.yaml` na raiz do projeto seguindo o modelo disponibilizado no [repositório original](https://github.com/rafael-labegalini/mysql-api-adsb/blob/main/docker-compose.yaml)
+
+Para executar a aplicação agora use os seguintes comandos:
 ```bash
 docker compose up -d
 npm start

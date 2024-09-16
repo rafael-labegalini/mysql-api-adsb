@@ -20,15 +20,11 @@ app.use(express.json());
 // Middleware para permitir dados no formato URLENCODED
 app.use(express.urlencoded({ extended: true }));
 
-app.get('/', async function (req: Request, res: Response) {
+app.get('/categories', async function (req: Request, res: Response) {
     const [rows] = await connection.query("SELECT * FROM categories");
-    return res.render('index', {
+    return res.render('categories/index', {
         categories: rows
     });
-});
-
-app.get('/categories', async function (req: Request, res: Response) {
-    return res.render('categories/form');
 });
 
 app.listen('3000', () => console.log("Server is listening on port 3000"));
