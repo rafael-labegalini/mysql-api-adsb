@@ -46,7 +46,7 @@ npx tsc --init
 ```bash
 mkdir src
 mkdir src/views
-touch src/app.ts
+touch src/index.ts
 ```
 
 ### Passo 3: Codificando
