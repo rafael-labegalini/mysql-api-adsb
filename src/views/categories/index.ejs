@@ -22,6 +22,17 @@
             <tbody>
                 <% if (categories.length > 0) { %>
                     <!-- lista de categorias vai aqui -->
+                     <% for (const category of categories) { %>
+                <tr>
+                    <td><%= category.id %></td>
+                    <td><%= category.name %></td>
+                    <td><%= category.created_at %></td>
+                    <td>
+                        <a href="#">editar</a>
+                        <a href="#">excluir</a>
+                    </td>
+                </tr>
+                     <% } %>
                 <%} else {%>
                 <tr>
                     <td colspan="4">Nenhuma categoria cadastrada</td>
