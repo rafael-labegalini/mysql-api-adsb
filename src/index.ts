@@ -27,4 +27,15 @@ app.get('/categories', async function (req: Request, res: Response) {
     });
 });
 
+app.get('/categories/form', async function (req: Request, res: Response) {
+    return res.render('categories/form');
+});
+
+app.post('/categories', async function (req: Request, res: Response) {
+    const data = req.body;
+    await connection.query("INSERT INTO categories (name, created_at, updated_at) VALUES (?, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)", data.name)
+    
+    return res.redirect('/categories');
+});
+
 app.listen('3000', () => console.log("Server is listening on port 3000"));
