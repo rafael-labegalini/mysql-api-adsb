@@ -21,7 +21,20 @@
             </thead>
             <tbody>
                 <% if (categories.length > 0) { %>
-                    <!-- lista de categorias vai aqui -->
+                    <% categories.forEach(category => { %>
+                        <tr>
+                            <td><%= category.id %></td>
+                            <td><%= category.name %></td>
+                            <td><%= category.created_at %></td>
+                            <td>
+                                <a href="#">editar</a>
+                                <form action="/categories/delete/<%= category.id %>" method="post">
+                                    <button type="submit" class="btn btn-primary">Excluir</button>
+                                </form>
+                            </td>
+                        </tr>
+                    <% }) %>
+
                 <%} else {%>
                 <tr>
                     <td colspan="4">Nenhuma categoria cadastrada</td>
@@ -29,7 +42,7 @@
                 <% } %>
             </tbody>
         </table>
-        <a href="#" class="btn btn-primary mt-3">Adicionar</a>
+        <a href="/categories/form" class="btn btn-primary mt-3">Adicionar</a>
     </div>
 
     <!-- Bootstrap JS CDN -->
